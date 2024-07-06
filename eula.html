@@ -9,24 +9,18 @@
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #f4f4f4;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    position: relative;
-    background: linear-gradient(135deg, #6e8efb, #a777e3);
-    color: white; /* 文字の色を白に設定 */
   }
+
   .header {
-  background-color: #333; /* ヘッダーの背景色 */
-  color: #fff; /* ヘッダーのテキスト色 */
-  padding: 10px;
-  text-align: right;
-  position: absolute;
-  top: 20px;
-  right: 20px;
-}
+    background-color: #333; /* ヘッダーの背景色 */
+    color: #fff; /* ヘッダーのテキスト色 */
+    padding: 10px 20px; /* 上下に10px、左右に20pxのパディングを追加 */
+    text-align: right;
+    position: fixed;
+    top: 0;
+    right: 0;
+    z-index: 1000;
+  }
 
   .header a {
     color: #fff; /* リンクの色 */
@@ -36,6 +30,7 @@
     border: 1px solid #fff; /* ボタンの枠線 */
     border-radius: 4px; /* ボタンの角の丸み */
   }
+
   .header a:hover {
     background-color: #555; /* ホバー時の背景色 */
   }
@@ -49,9 +44,11 @@
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     display: none; /* 最初は非表示 */
   }
+
   .form-container h2 {
     text-align: center;
   }
+
   .form-container input[type="text"],
   .form-container input[type="password"],
   .form-container input[type="email"],
@@ -63,8 +60,8 @@
     border-radius: 4px;
     box-sizing: border-box;
   }
-  .form-container button,
-  .header button {
+
+  .form-container button {
     width: auto;
     padding: 8px 12px;
     background-color: #333;
@@ -74,8 +71,8 @@
     cursor: pointer;
     margin-left: 10px;
   }
-  .form-container button:hover,
-  .header button:hover {
+
+  .form-container button:hover {
     background-color: #555;
   }
 
